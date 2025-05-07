@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>ClickFast</title>
+  </head>
+  <body>
+    <div id="main">
+      <div id="container">
+        <h1 class="flex">ClickFast</h1>
+        <p class="catchphrase">Sois le plus rapide des clickers du game ⚡</p>
+        <div class="timer-buttons">
+            <button onclick="prepareGame(5)">5s</button>
+            <button onclick="prepareGame(10)">10s</button>
+            <button onclick="prepareGame(30)">30s</button>
+          </div>
+        
+          <button id="click-button" onclick="handleClick()">Cliquez-moi !</button>
+          <div id="score"></div>
+          <div id="name-input" style="display:none;">
+            <input type="text" id="player-name" placeholder="Votre nom">
+            <button onclick="submitScore()">Valider</button>
+          </div>
+        
+          <div class="ladder">
+            <h2>Top 10 - 5s</h2>
+            <table id="ladder-5s"></table>
+            <h2>Top 10 - 10s</h2>
+            <table id="ladder-10s"></table>
+            <h2>Top 10 - 30s</h2>
+            <table id="ladder-30s"></table>
+            <button id="reset-button" onclick="resetLeaderboard()">Réinitialiser le classement</button>
+          </div>
+  </body>
+  <script src="script.js"></script>
+</html>
