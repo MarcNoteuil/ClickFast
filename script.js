@@ -98,6 +98,5 @@ let timeLeft = 0;
       }
     }
 
-    // updateLadders();
 
     module.exports = { prepareGame, startGame, handleClick, handleClickIfGameStarted, endGame, submitScore, updateLadders, resetLeaderboard };
