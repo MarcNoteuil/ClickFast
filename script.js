@@ -35,14 +35,20 @@ let timeLeft = 0;
       }, 1000);
     }
 
-    function handleClick() {
-      if (!gameStarted) {
-        startGame();
-      }
+    function handleClick(clicks) {
       const btn = document.getElementById("click-button");
       btn.classList.add("clicked");
       setTimeout(() => btn.classList.remove("clicked"), 100);
-      clicks++;
+      return clicks + 1;
+    }
+
+
+
+    function handleClickIfGameStarted() {
+      if (!gameStarted) {
+        startGame();
+      }
+      clicks = handleClick(clicks);
     }
 
     function endGame() {
@@ -92,4 +98,6 @@ let timeLeft = 0;
       }
     }
 
-    updateLadders();
+    // updateLadders();
+
+    module.exports = { prepareGame, startGame, handleClick, handleClickIfGameStarted, endGame, submitScore, updateLadders, resetLeaderboard };
