@@ -12,17 +12,20 @@ describe("Test du bouton clic", () => {
     
     })
 
+    
+    test(`Cliquer 5 fois augmente le score de 5`, () => {
 
-    test("Cliquer 3 fois augmente le score de 3", () => {
-
-      let clicks = 0;
-      clicks = handleClick(clicks);
-      clicks = handleClick(clicks);
-      clicks = handleClick(clicks);
-      clicks = handleClick(clicks);
-      clicks = handleClick(clicks);
-      
+    let clicks = 0;
+       
+    clicks = handleClick(clicks);
+    clicks = handleClick(clicks);
+    clicks = handleClick(clicks);
+    clicks = handleClick(clicks);
+    clicks = handleClick(clicks);
+    
+   
       console.log(clicks)
       expect(clicks).toBe(5);
+      localStorage.clear();
     })
 })
